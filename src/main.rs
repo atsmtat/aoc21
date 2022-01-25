@@ -10,6 +10,7 @@ mod day5;
 mod day6;
 mod day7;
 mod day8;
+mod day9;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let matches = App::new("aoc21")
@@ -72,6 +73,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         6 => day6::solve(lines, part),
         7 => day7::solve(lines, part),
         8 => day8::solve(lines, part),
+        9 => day9::solve(lines, part),
         _ => {
             println!("Unsolved");
         }
