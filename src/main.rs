@@ -6,6 +6,9 @@ mod day1;
 mod day10;
 mod day11;
 mod day12;
+mod day13;
+mod day15;
+mod day16;
 mod day2;
 mod day3;
 mod day4;
@@ -26,7 +29,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                 .long("day")
                 .takes_value(true)
                 .required(true)
-                .help("Day of the calendar between 1-8"),
+                .help("Day of the calendar between 1-25"),
         )
         .arg(
             Arg::with_name("part")
@@ -80,6 +83,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         10 => day10::solve(lines, part),
         11 => day11::solve(lines, part),
         12 => day12::solve(lines, part),
+        13 => day13::solve(lines, part),
+        15 => day15::solve(lines, part),
+        16 => day16::solve(lines, part),
         _ => {
             println!("Unsolved");
         }
